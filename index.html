@@ -40,15 +40,15 @@
       </nav>
       <address class="contacts">
         <ul class="list contacts-list">
-          <li>
-            <a class="link contact-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <li class="contact-item">
+            <a class="link contact-item-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li>
-            <a class="link contact-item" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          <li class="contact-item">
+            <a class="link contact-item-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
           </li>
         </ul>
       </address>
-      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu-window">
         <svg width="32" height="22" fill="currentColor" >
            <use href="./images/icons.svg#menu-hamburger"></use>
         </svg>
@@ -57,19 +57,19 @@
   <!-- ========================= Mobile MENU ======================== -->
   <div class="mobile-menu-window js-menu-container">
     <div class="container mobile-menu-container">
-      <button class="menu-toggle js-close-menu">
+      <button class="menu-toggle-close js-close-menu">
         <svg class="icon-close" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
       <ul class="list mobile-menu">
-          <li>
+          <li class="mobile-menu-item">
             <a class="mobile-link-nav link current-underlined" href="./index.html">Studio</a>
           </li>
-          <li>
+          <li class="mobile-menu-item">
             <a class="mobile-link-nav link" href="./portfolio.html">Portfolio</a>
           </li>
-          <li>
+          <li class="mobile-menu-item">
             <a class="mobile-link-nav link" href="">Contacts</a>
           </li>
       </ul>
@@ -121,11 +121,11 @@
         <button class="modal-button" type="button" data-modal-open>Order Service</button>
       </div>
     </section>
-    <!-- ================= STRANGHTS ================= -->
+    <!-- ================= STRENGHTS ================= -->
     <section class="strengths">
       <div class="container">
         <h2 class="section-title visually-hidden">Our strengths</h2>
-        <ul class="list list-flex-grid-gap">
+        <ul class="list strengths-flex-grid-gap"> 
           <li class="list-content-item strengths-list-item">
               <div class="strengths-img">
                 <svg class="strengths-icon" width="64" height="64">
@@ -187,10 +187,19 @@
             </picture>
           </li>
           <li class="work-item">
-            <img src="./images/img_2.jpg" alt="Photo - mobile app" width="360">
+            <picture>
+              <source srcset="./images/img_2.webp 1x, ./images/img_2@2x.webp 2x" type="image/webp">
+              <source srcset="./images/img_2.jpg 1x,./images/img_2@2x.jpg 2x" type="image/jpg">
+              <img src="./images/img_2.jpg" alt="Photo - mobile app" width="360">
+            </picture>
           </li>
           <li class="work-item">
-            <img src="./images/img_3.jpg" alt="Photo - all kinds of devices" width="360">
+            <picture>
+              <source srcset="./images/img_3.webp 1x, ./images/img_3@2x.webp 2x" type="image/webp">
+              <source srcset="./images/img_3.jpg 1x,./images/img_3@2x.jpg 2x" type="image/jpg">
+              <img src="./images/img_3.jpg" alt="Photo - all kinds of devices" width="360">
+            </picture>
+            
           </li>
         </ul>
       </div>
@@ -201,8 +210,8 @@
     <section class="team">
       <div class="container-grid">
         <h2 class="section-title">Our Team</h2>
-        <ul class="list list-flex-grid-gap">
-          <li class="list-content-item team-item">
+        <ul class="list team-flex-grid-gap">
+          <li class="team-item">
             <picture class="grid-image">
               <source 
                 srcset="./images/Guerro.webp 1x, ./images/Guerro@2x.webp 2x"
@@ -451,7 +460,7 @@
     <!-- ==================== CUSTOMERS ================= -->
   </main>
   <!-- ================= FOOTER ================= -->
-  <footer class="footer">
+  <footer class="footer ">
     <div class="container footer-container-flex">
       <div class="margin-div-footer">
         <a class="footer-logo-link link" href="./index.html">Web<span class="span-logo">Studio</span></a>
@@ -526,7 +535,7 @@
       <p class="modal-description">Leave your contacts and we will call you back</p>
       <form>   <!-- class="contact-form"> -->
         
-        <div class="contact-item">
+        <div class="modal-contact-item">
           <label class="contact-input-wrapper" for="user-name">Name</label>
             <div class="contact-input-icon-wrapper-my">
               <input class="contact-input" 
@@ -540,7 +549,7 @@
             </div>
         </div>
 
-        <div class="contact-item">
+        <div class="modal-contact-item">
           <label class="contact-input-wrapper" for="user-phone">Phone</label>
             <div class="contact-input-icon-wrapper-my">
               <input class="contact-input" 
@@ -555,7 +564,7 @@
             </div>
         </div>
 
-        <div class="contact-item">
+        <div class="modal-contact-item">
           <label class="contact-input-wrapper" for="user-mail">Email</label>
             <div class="contact-input-icon-wrapper-my">
               <input class="contact-input" type="email" name="user_mail" id="user-mail" required>

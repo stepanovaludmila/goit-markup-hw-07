@@ -20,7 +20,7 @@
 
 <body>
   <!-- ================= HEADER ================= -->
-    <header class="page-header">
+  <header class="page-header">
     <div class="container page-header-container">
       <nav class="page-nav">
         <a class="logo link" href="./index.html">
@@ -28,10 +28,10 @@
         </a>
         <ul class="list menu-list">
           <li>
-            <a class="link-nav link" href="./index.html">Studio</a>
+            <a class="link-nav link current-underlined" href="./index.html">Studio</a>
           </li>
           <li>
-            <a class="link-nav link current-underlined" href="./portfolio.html">Portfolio</a>
+            <a class="link-nav link" href="./portfolio.html">Portfolio</a>
           </li>
           <li>
             <a class="link-nav link" href="">Contacts</a>
@@ -40,14 +40,75 @@
       </nav>
       <address class="contacts">
         <ul class="list contacts-list">
-          <li>
-            <a class="link contact-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <li class="contact-item">
+            <a class="link contact-item-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li>
-            <a class="link contact-item" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          <li class="contact-item">
+            <a class="link contact-item-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
           </li>
         </ul>
       </address>
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="32" height="22" fill="currentColor">
+          <use href="./images/icons.svg#menu-hamburger"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- ========================= Mobile MENU ======================== -->
+    <div class="mobile-menu-window js-menu-container">
+      <div class="container mobile-menu-container">
+        <button class="menu-toggle js-close-menu">
+          <svg class="icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="list mobile-menu">
+          <li>
+            <a class="mobile-link-nav link current-underlined" href="./index.html">Studio</a>
+          </li>
+          <li>
+            <a class="mobile-link-nav link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a class="mobile-link-nav link" href="">Contacts</a>
+          </li>
+        </ul>
+        <address class="mobile-contacts">
+          <a class="link mobile-contact-tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          <a class="link mobile-contact-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </address>
+        <ul class="mobile-social-list list">
+          <li class="social-links-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram-1"> </use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter-1"> </use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook-1"> </use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#linkedin-1"> </use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
     </div>
   </header>
   <!--================= HEADER end ================= -->
@@ -207,7 +268,7 @@
     </section>
   </main>
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+    <footer class="footer ">
       <div class="container footer-container-flex">
         <div class="margin-div-footer">
           <a class="footer-logo-link link" href="./index.html">Web<span class="span-logo">Studio</span></a>
@@ -268,6 +329,7 @@
         <!-- ================ FOOTER SUBSCRIBE- END ===========-->
       </div>
     </footer>
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
