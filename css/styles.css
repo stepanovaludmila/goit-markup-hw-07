@@ -112,13 +112,6 @@ img {
   color: var(--color-dark);
   margin-bottom: 8px;
 }
-/* =================== */
-.flex-grid-gap {
-  display: flex;
-  row-gap: var(--card-set-gap);
-  flex-wrap: wrap;
-}
-/* =================== */
 .list-flex-grid-gap {
   display: block;
   margin: 0 auto;
@@ -132,9 +125,6 @@ img {
   }
 }
 /* =================== */
-.grid-image {
-  width: 264px;
-}
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -282,7 +272,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  /* padding: 0 40px 40px; */
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--color-cloud);
   z-index: 999;
   transform: translateX(100%); 
@@ -292,19 +283,17 @@ img {
   position: relative;
   max-width: 428px;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 80px 40px 40px;
+  padding: 80px 35px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .menu-toggle-close {
   position: fixed;
-  right: 20px;
-  top: 20px;
-  min-height: 40px;
-  min-width: 40px;
+  right: 28px;
+  top: 23px;
+  min-height: 24px;
+  min-width: 24px;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -367,12 +356,16 @@ img {
   display: block;
   font-style: normal;
   font-weight: 700;
-  /* font-size: 36px; */
-  font-size: 7vw;
+  font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--color-interactive-normal);
+}
+@media screen and (max-width: 440px) {
+  .mobile-contact-tel {
+    font-size: 7vw;
+  }
 }
 .mobile-contact-mail {
   display: block;
@@ -402,7 +395,6 @@ img {
 /* -------------HEADER end ------------- */
 /* ------------- HERO ------------- */
 .hero {
-  height: 432px;
   background-color: var(--color-dark);
   color: var(--color-light);
   padding: 112px 0;
@@ -410,40 +402,40 @@ img {
   margin-right: auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 /* mobile */
-@media screen and (max-width:767px) {
-  .hero {
+.hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-   rgba(46, 47, 66, 0.7)), url(../images/people-mobile.jpg);
-  }
+        rgba(46, 47, 66, 0.7)), url(../images/people-mobile.jpg);
+  
   @media 
       screen and (min-device-pixel-ratio: 2) and (max-width:767px),
       screen and (min-resolution: 192dpi) and (max-width:767px),
       screen and (min-resolution: 2dppx) and (max-width:767px) {
         .hero {
           background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-           rgba(46, 47, 66, 0.7)), url(../images/people-mobile@2x.jpg);
+            rgba(46, 47, 66, 0.7)), url(../images/people-mobile@2x.jpg);
         }
   }
- }
-
+}
  /* tablet */
 @media  screen and (min-width: 768px) and (max-width: 1157px) {
   .hero{
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)), url(../images/People-tablet.jpg);
   }
-     @media screen and (min-device-pixel-ratio: 2) and (max-width:1157px),
-     screen and (min-resolution: 192dpi) and (max-width:1157px),
-     screen and (min-resolution: 2dppx) and (max-width:1157px) {
+
+     @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1157px),
+     screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width:1157px),
+     screen and (min-resolution: 2dppx) and (min-width: 768px)  and (max-width:1157px) {
        .hero {
          background-image: linear-gradient(rgba(46, 47, 66, 0.7),
              rgba(46, 47, 66, 0.7)), url(../images/People-tablet@2x.jpg);
        }
      }
 }
+
 /* desctop */
 @media screen and (min-width: 1158px) {
   .hero {
@@ -451,9 +443,10 @@ img {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)), url(../images/people.jpg);
   }
-      @media screen and (min-device-pixel-ratio: 2) and (max-width:1157px),
-      screen and (min-resolution: 192dpi) and (max-width:1157px),
-      screen and (min-resolution: 2dppx) and (max-width:1157px) {
+
+      @media screen and (min-device-pixel-ratio: 2) and (min-width:1158px),
+      screen and (min-resolution: 192dpi) and (min-width:1158px),
+      screen and (min-resolution: 2dppx) and (min-width:1158px) {
         .hero {
           background-image: linear-gradient(rgba(46, 47, 66, 0.7),
               rgba(46, 47, 66, 0.7)), url(../images/people@2x.jpg);
@@ -465,7 +458,7 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  width: 320px;
+  max-width: 320px;
   letter-spacing: 0.02em;
   overflow-wrap: normal;
   text-align: center;
@@ -519,12 +512,11 @@ img {
   text-align: left;
   background-color: var(--color-light);
 }
-@media screen and (max-width: 767px) {
-  .strengths {
-    padding: 96px 0;
-  }
+.strengths {
+  padding: 96px 0;
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 1158px) {
   .strengths {
     padding: 120px 0;
   }
@@ -606,17 +598,16 @@ img {
       align-items: center;
     }
   }
-    .item-description {
+    .strengths-item-description {
       color: var(--color-slate);
-      font-weight: 400;
+      font-weight: 500;
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.02em;  
-      margin-bottom: 8px;
     }
- @media screen and (max-width: 1157px) {
-  .item-description{
-    font-weight: 500;
+ @media screen and (min-width: 1158px) {
+  .strengths-item-description{
+    font-weight: 400;
   }
 }
 /* =================STRENGHTS END================= */
@@ -627,7 +618,7 @@ img {
 
 .flex-grid-gap {
   display: flex;
-  row-gap: var(--card-set-gap);
+  gap: var(--card-set-gap);
   flex-wrap: wrap;
 }
 
@@ -679,14 +670,13 @@ img {
     flex-wrap: wrap;
   }
 }
-
 /* =================== */
+
 .team-item {
-  
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 264px;
+  max-width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -708,8 +698,19 @@ img {
     width: calc((100% - 3*var(--card-set-gap)) / 4);
   }
 }
+ .grid-image {
+  max-width: 264px;
+} 
 .card-description {
   padding: 32px 0;
+}
+.team-item-description {
+  color: var(--color-slate);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .social-list {
@@ -1146,7 +1147,6 @@ img {
 }
 
 .contact-input-icon {
-  /*display: block;*/
   position: absolute;
   top: 50%;
   left: 16px;
@@ -1203,6 +1203,7 @@ img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
+  flex-shrink: 0;
   background: var(--color-light);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
@@ -1332,10 +1333,24 @@ img {
   column-gap: 24px;
   row-gap: 48px;
 }
+@media screen and (min-width: 768px) {
+  .gallery-item {
+      flex-basis: calc((100% - 1*var(--card-set-gap))/2);
+    }
+}
+@media screen and (min-width: 1158px) {
+  .gallery-item {
+      flex-basis: calc((100% - 2*var(--card-set-gap))/3);
+    }
+}
 
-.gallery-item {
-  flex-basis: calc((100% - 2*var(--card-set-gap))/3);
-  /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);*/
+.gallery-item-description {
+  color: var(--color-slate);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .gallery-item-link {
@@ -1354,11 +1369,13 @@ img {
   border-top: none;
 }
 
-.wrapper-portfolio-imge {
+.wrapper-portfolio-image {
   position: relative;
   overflow: hidden;
 }
-
+.portfolio-grid-image {
+  width:  100%;
+}
 .gallery-item-link:hover .overlay-description,
 .gallery-item-link:focus .overlay-description {
   transform: translateY(0);
